@@ -118,34 +118,31 @@
             <img src="product.jpg" alt="Relief Pro Multi-Action Pain Capsules" class="podium-bottle-photo">
           </div>
 
-          <!-- SVG Precision Pointer Lines with Dots (Strictly Royal Blue #1F3A8A) -->
-          <svg class="podium-pointers-svg" viewBox="0 0 380 320" preserveAspectRatio="none">
-            <!-- Left Top Pointer: Herbal Ingredients (Ends at X=96, before text) -->
-            <circle cx="132" cy="100" r="3.5" class="pointer-dot-svg" />
-            <path d="M 132,100 L 108,100 L 96,86" class="pointer-path-svg" />
-
-            <!-- Right Mid Pointer: Herbal Formulation (Ends at X=284, before text) -->
-            <circle cx="248" cy="145" r="3.5" class="pointer-dot-svg" />
-            <path d="M 248,145 L 272,145 L 284,158" class="pointer-path-svg" />
-
-            <!-- Left Bottom Pointer: आसान सेवन (Ends at X=96, before text) -->
-            <circle cx="130" cy="202" r="3.5" class="pointer-dot-svg" />
-            <path d="M 130,202 L 96,202" class="pointer-path-svg" />
-          </svg>
-
-          <!-- Callout Label 1: Herbal Ingredients (Top-Left) -->
+          <!-- Feature Callout 1: Herbal Ingredients (Top-Left) -->
           <div class="podium-callout callout-left-top">
-            <h4>Herbal<br>Ingredients</h4>
+            <div class="callout-pill pill-left">Herbal<br>Ingredients</div>
+            <div class="callout-pointer-line line-right">
+              <span class="callout-arm-horiz"></span>
+              <span class="callout-dot"></span>
+            </div>
           </div>
 
-          <!-- Callout Label 2: Herbal Formulation (Mid-Right) -->
+          <!-- Feature Callout 2: Herbal Formulation (Mid-Right) -->
           <div class="podium-callout callout-right-mid">
-            <h4>Herbal<br>Formulation</h4>
+            <div class="callout-pointer-line line-left">
+              <span class="callout-dot"></span>
+              <span class="callout-arm-horiz"></span>
+            </div>
+            <div class="callout-pill pill-right">Herbal<br>Formulation</div>
           </div>
 
-          <!-- Callout Label 3: आसान सेवन (Bottom-Left) -->
+          <!-- Feature Callout 3: आसान सेवन (Bottom-Left) -->
           <div class="podium-callout callout-left-bottom">
-            <h4>आसान सेवन</h4>
+            <div class="callout-pill pill-left">आसान<br>सेवन</div>
+            <div class="callout-pointer-line line-right">
+              <span class="callout-arm-horiz"></span>
+              <span class="callout-dot"></span>
+            </div>
           </div>
 
           <!-- 3D White Pedestal Base with Saffron Rim -->
@@ -189,15 +186,10 @@
 
     <!-- SECTION 4: How Pain Oil Works (Connecting Bridges & Dotted Rings Infographic) -->
     <section class="how-it-works-section" id="how-it-works">
-      <!-- Section Header -->
-      <div class="section-tag-center">
-        <!-- <span class="tag-pill">How Pain Oil Works</span> -->
-      </div>
-
       <h2 class="section-title-works">
         Relief Pro <span class="highlight-saffron">कैसे काम करता है?</span>
       </h2>
-      <div class="title-bar-small"></div>
+      <div class="bar-saffron-center" style="margin: 6px auto 14px auto;"></div>
 
       <!-- Continuous Ribbon Infographic -->
       <div class="infographic-flow-container">
@@ -215,48 +207,48 @@
               <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.22" />
             </filter>
 
-            <!-- Circular Clips for Bigger Images (Diameter 126px) -->
+            <!-- Circular Clips for Bigger Images (Diameter 144px) -->
             <clipPath id="discClip1">
-              <circle cx="68" cy="88" r="63" />
+              <circle cx="70" cy="88" r="72" />
             </clipPath>
             <clipPath id="discClip2">
-              <circle cx="332" cy="266" r="63" />
+              <circle cx="330" cy="266" r="72" />
             </clipPath>
             <clipPath id="discClip3">
-              <circle cx="68" cy="444" r="63" />
+              <circle cx="70" cy="444" r="72" />
             </clipPath>
             <clipPath id="discClip4">
-              <circle cx="332" cy="622" r="63" />
+              <circle cx="330" cy="622" r="72" />
             </clipPath>
           </defs>
 
           <!-- LAYER 1: Single Solid Royal Blue Connecting Line (Never touches text!) -->
-          <path d="M 68,88 C 68,177 332,177 332,266 C 332,355 68,355 68,444 C 68,533 332,533 332,622" stroke="#2563EB"
-            stroke-width="38" stroke-linecap="round" stroke-linejoin="round" filter="url(#bridgeShadow)" />
+          <path d="M 70,88 C 70,177 330,177 330,266 C 330,355 70,355 70,444 C 70,533 330,533 330,622" stroke="#2563EB"
+            stroke-width="44" stroke-linecap="round" stroke-linejoin="round" filter="url(#bridgeShadow)" />
 
-          <!-- LAYER 2: 3D Elevated White Discs & Large Photos (Diameter 126px) -->
+          <!-- LAYER 2: 3D Elevated White Discs & Large Photos (Diameter 144px) -->
           <!-- Disc 1 -->
-          <circle cx="68" cy="88" r="67" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
-            stroke-width="3" />
-          <image href="2.1.webp" xlink:href="2.1.webp" x="5" y="25" width="126" height="126" clip-path="url(#discClip1)"
-            preserveAspectRatio="xMidYMid slice" />
+          <circle cx="70" cy="88" r="76" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
+            stroke-width="3.5" />
+          <image href="2.1.webp" xlink:href="2.1.webp" x="-2" y="16" width="144" height="144"
+            clip-path="url(#discClip1)" preserveAspectRatio="xMidYMid slice" />
 
           <!-- Disc 2 -->
-          <circle cx="332" cy="266" r="67" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
-            stroke-width="3" />
-          <image href="2.2.jpg" xlink:href="2.2.jpg" x="269" y="203" width="126" height="126"
+          <circle cx="330" cy="266" r="76" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
+            stroke-width="3.5" />
+          <image href="2.2.jpg" xlink:href="2.2.jpg" x="258" y="194" width="144" height="144"
             clip-path="url(#discClip2)" preserveAspectRatio="xMidYMid slice" />
 
           <!-- Disc 3 -->
-          <circle cx="68" cy="444" r="67" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
-            stroke-width="3" />
-          <image href="hn.webp" xlink:href="hn.webp" x="5" y="381" width="126" height="126" clip-path="url(#discClip3)"
+          <circle cx="70" cy="444" r="76" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
+            stroke-width="3.5" />
+          <image href="hn.webp" xlink:href="hn.webp" x="-2" y="372" width="144" height="144" clip-path="url(#discClip3)"
             preserveAspectRatio="xMidYMid slice" />
 
           <!-- Disc 4 -->
-          <circle cx="332" cy="622" r="67" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
-            stroke-width="3" />
-          <image href="ds.jpg" xlink:href="ds.jpg" x="269" y="559" width="126" height="126" clip-path="url(#discClip4)"
+          <circle cx="330" cy="622" r="76" fill="#FFFFFF" filter="url(#discElevatedShadow)" stroke="#F8FAFC"
+            stroke-width="3.5" />
+          <image href="ds.jpg" xlink:href="ds.jpg" x="258" y="550" width="144" height="144" clip-path="url(#discClip4)"
             preserveAspectRatio="xMidYMid slice" />
         </svg>
 
@@ -335,11 +327,6 @@
 
     <!-- SECTION 5: Ingredients (Organic Leaf Cards - Royal Blue & Saffron Style) -->
     <section class="ingredients-section leaf-cards-style" id="ingredients-section">
-      <!-- Section Header -->
-      <div class="section-tag-center">
-        <!-- <span class="tag-pill">Ingredients</span> -->
-      </div>
-
       <h2 class="section-title-ingredients">
         प्राकृतिक देखभाल से जुड़े <span class="highlight-saffron">चुनिंदा Ingredients</span>
       </h2>
@@ -405,16 +392,11 @@
       </h2>
       <div class="title-bar-small bar-saffron-center"></div>
 
-      <!-- 2x2 Grid with Offset Colored Flaps & Curved Step Tabs (Reference Design) -->
+      <!-- 2x2 Grid with Offset Colored Flaps -->
       <div class="trust-grid-container">
         <!-- Card 1: GMP (Top-Left) -->
         <div class="trust-card-wrapper card-tl">
           <div class="trust-inner-card">
-            <!-- Curved Step Tab (Bottom-Right) -->
-            <div class="step-tab tab-br tab-saffron">
-              <span class="tab-step">STEP</span>
-              <span class="tab-num">01</span>
-            </div>
             <!-- Certificate Image -->
             <div class="trust-cert-wrap">
               <img src="cert1.avif" alt="GMP Certified" class="trust-cert-img">
@@ -428,11 +410,6 @@
         <!-- Card 2: ISO (Top-Right) -->
         <div class="trust-card-wrapper card-tr">
           <div class="trust-inner-card">
-            <!-- Curved Step Tab (Bottom-Left) -->
-            <div class="step-tab tab-bl tab-blue">
-              <span class="tab-step">STEP</span>
-              <span class="tab-num">02</span>
-            </div>
             <!-- Certificate Image -->
             <div class="trust-cert-wrap">
               <img src="iso.avif" alt="ISO Certified" class="trust-cert-img">
@@ -446,11 +423,6 @@
         <!-- Card 3: FSSAI (Bottom-Left) -->
         <div class="trust-card-wrapper card-bl">
           <div class="trust-inner-card">
-            <!-- Curved Step Tab (Top-Right) -->
-            <div class="step-tab tab-tr tab-blue">
-              <span class="tab-step">STEP</span>
-              <span class="tab-num">03</span>
-            </div>
             <!-- Certificate Image -->
             <div class="trust-cert-wrap">
               <img src="cert3.avif" alt="FSSAI" class="trust-cert-img">
@@ -464,11 +436,6 @@
         <!-- Card 4: Quality Tested (Bottom-Right) -->
         <div class="trust-card-wrapper card-br">
           <div class="trust-inner-card">
-            <!-- Curved Step Tab (Top-Left) -->
-            <div class="step-tab tab-tl tab-saffron">
-              <span class="tab-step">STEP</span>
-              <span class="tab-num">04</span>
-            </div>
             <!-- Certificate Image -->
             <div class="trust-cert-wrap">
               <img src="cert4.avif" alt="Quality Tested" class="trust-cert-img">
@@ -478,6 +445,294 @@
             <p class="trust-card-sub">Lab Verified</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Comparison (Relief Pro vs Other Market Products) -->
+    <section class="comparison-section" id="comparison-section">
+      <h2 class="section-title-comparison">
+        Relief Pro <span class="highlight-saffron">बनाम अन्य विकल्प</span>
+      </h2>
+      <div class="title-bar-small bar-saffron-center"></div>
+
+      <!-- Comparison Card Table (Mobile-First 2-Column Card) -->
+      <div class="comparison-table-wrapper">
+        <!-- Header Row with Product Badges -->
+        <div class="comp-header-row">
+          <!-- Relief Pro Column Header -->
+          <div class="comp-col comp-col-relief">
+            <span class="comp-winner-badge">⭐ Best Choice</span>
+            <div class="comp-header-img-wrap">
+              <img src="product.jpg" alt="Relief Pro" class="comp-header-img">
+            </div>
+            <h3 class="comp-prod-title">Relief Pro</h3>
+            <p class="comp-prod-tag">Herbal Formula</p>
+          </div>
+
+          <!-- Other Products Column Header -->
+          <div class="comp-col comp-col-other">
+            <span class="comp-other-badge">Ordinary</span>
+            <div class="comp-header-img-wrap">
+              <img src="chemical_pills.jpg" alt="अन्य विकल्प" class="comp-header-img comp-header-img-other">
+            </div>
+            <h3 class="comp-prod-title comp-title-muted">अन्य विकल्प</h3>
+            <p class="comp-prod-tag comp-tag-muted">साधारण प्रोडक्ट्स</p>
+          </div>
+        </div>
+
+        <!-- Comparison Rows: Exactly 3 Differences with Images -->
+        <div class="comp-body">
+          <!-- Difference 1: घटक / Ingredients -->
+          <div class="comp-item-row">
+            <div class="comp-feature-label">
+              <span class="diff-num">01</span> मुख्य घटक (Ingredients)
+            </div>
+            <div class="comp-item-split">
+              <!-- Relief Pro -->
+              <div class="comp-cell comp-cell-relief">
+                <div class="comp-thumb-box">
+                  <img src="haldijpg.jpg" alt="प्राकृतिक जड़ी-बूटियाँ" class="comp-thumb-img">
+                  <span class="comp-status-float check">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="comp-cell-info">
+                  <h4 class="comp-cell-title">100% प्राकृतिक Herbs</h4>
+                  <p class="comp-cell-desc">हल्दी, शल्लकी, अश्वगंधा व गुग्गुल का शुद्ध मिश्रण</p>
+                </div>
+              </div>
+
+              <!-- Other Products -->
+              <div class="comp-cell comp-cell-other">
+                <div class="comp-thumb-box">
+                  <img src="chemical_pills.jpg" alt="केमिकल पेनकिलर" class="comp-thumb-img">
+                  <span class="comp-status-float cross">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                      <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="comp-cell-info">
+                  <h4 class="comp-cell-title">सिंथेटिक केमिकल्स</h4>
+                  <p class="comp-cell-desc">हानिकारक रसायन व कृत्रिम पेनकिलर साल्ट्स</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Difference 2: असर व राहत / Action & Relief -->
+          <div class="comp-item-row">
+            <div class="comp-feature-label">
+              <span class="diff-num">02</span> असर व राहत (Action & Relief)
+            </div>
+            <div class="comp-item-split">
+              <!-- Relief Pro -->
+              <div class="comp-cell comp-cell-relief">
+                <div class="comp-thumb-box">
+                  <img src="hn.webp" alt="सक्रिय व लचीले जोड़" class="comp-thumb-img">
+                  <span class="comp-status-float check">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="comp-cell-info">
+                  <h4 class="comp-cell-title">अंदरूनी पोषण व राहत</h4>
+                  <p class="comp-cell-desc">जोड़ों के दर्द के मुख्य कारण पर सीधा पोषण दे</p>
+                </div>
+              </div>
+
+              <!-- Other Products -->
+              <div class="comp-cell comp-cell-other">
+                <div class="comp-thumb-box">
+                  <img src="1.jpg" alt="दर्द का अहसास" class="comp-thumb-img">
+                  <span class="comp-status-float cross">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                      <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="comp-cell-info">
+                  <h4 class="comp-cell-title">सिर्फ दिखावटी आराम</h4>
+                  <p class="comp-cell-desc">कुछ घंटों का असर, खत्म होते ही दर्द दोबारा</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Difference 3: सुरक्षा व प्रमाणन / Safety & Certification -->
+          <div class="comp-item-row">
+            <div class="comp-feature-label">
+              <span class="diff-num">03</span> सुरक्षा व प्रमाणन (Safety & Trust)
+            </div>
+            <div class="comp-item-split">
+              <!-- Relief Pro -->
+              <div class="comp-cell comp-cell-relief">
+                <div class="comp-thumb-box">
+                  <img src="cert4.avif" alt="लैब टेस्टेड व प्रमाणित" class="comp-thumb-img comp-thumb-contain">
+                  <span class="comp-status-float check">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="comp-cell-info">
+                  <h4 class="comp-cell-title">100% सुरक्षित व प्रमाणित</h4>
+                  <p class="comp-cell-desc">GMP, ISO प्रमाणित व लैब टेस्टेड, कोई साइड इफेक्ट नहीं</p>
+                </div>
+              </div>
+
+              <!-- Other Products -->
+              <div class="comp-cell comp-cell-other">
+                <div class="comp-thumb-box">
+                  <img src="side_effects.jpg" alt="साइड इफेक्ट्स चेतावनी" class="comp-thumb-img">
+                  <span class="comp-status-float cross">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                      <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="comp-cell-info">
+                  <h4 class="comp-cell-title">साइड इफेक्ट्स का खतरा</h4>
+                  <p class="comp-cell-desc">पेट व शरीर पर प्रतिकूल प्रभाव का भारी डर</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: Final CTA (Image Ke Sath Designed) -->
+    <section class="final-cta-section" id="final-cta-section">
+      <!-- Elevated White Action Card with Saffron Accent Border -->
+      <div class="final-cta-card">
+        <!-- Main Section Title (Exact user text) -->
+        <h2 class="final-cta-title">
+          जॉइंट्स की बेहतर देखभाल की ओर <span class="highlight-saffron">बढ़ाएँ कदम</span>
+        </h2>
+        <div class="bar-saffron-center" style="margin: 8px auto 16px auto;"></div>
+
+        <!-- Descriptive Copy (Exact user text) -->
+        <p class="final-cta-desc-primary">
+          जोड़ों में दर्द और अकड़न से जुड़ी परेशानियों के लिए अपनी देखभाल पर ध्यान दें।
+        </p>
+        <p class="final-cta-desc-secondary">
+          Relief Pro के साथ जोड़ों और मांसपेशियों की देखभाल को अपनी दिनचर्या का हिस्सा बनाएँ।
+        </p>
+
+        <!-- Product Showcase Box with Image -->
+        <div class="final-cta-prod-box">
+          <div class="final-cta-img-wrap">
+            <img src="product.jpg" alt="Relief Pro - Herbal Joint Care Tablets" class="final-cta-prod-img">
+          </div>
+          <div class="final-cta-prod-badge">
+            <h3 class="final-cta-prod-name">Relief Pro</h3>
+            <p class="final-cta-prod-sub">Herbal Joint Care Tablets</p>
+          </div>
+        </div>
+
+        <!-- High-Impact Action Button (Exact user text) -->
+        <div class="final-cta-btn-wrap">
+          <a href="#order" class="final-cta-btn">
+            <span class="btn-text">उत्पाद की जानकारी लें | अभी ऑर्डर करें</span>
+            <svg class="btn-arrow-icon" viewBox="0 0 20 20" fill="currentColor" width="22" height="22">
+              <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: Order Now (Lead Order Form) -->
+    <section class="order-section" id="order">
+      <!-- Order Card Container -->
+      <div class="order-card-wrapper">
+        <!-- Section Header with Saffron Highlight -->
+        <h2 class="order-section-title">
+          Relief Pro <span class="highlight-saffron">घर बैठे ऑर्डर करें</span>
+        </h2>
+        <div class="bar-saffron-center" style="margin: 8px auto 20px auto;"></div>
+
+        <!-- Order Form (Clean, Mobile-Optimized) -->
+        <form class="order-form" id="leadOrderForm" novalidate>
+          <!-- Name Input Field -->
+          <div class="form-group">
+            <label for="userName" class="form-label">आपका नाम</label>
+            <div class="input-icon-wrap" id="nameWrap">
+              <svg class="input-inner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <input type="text" id="userName" name="userName" class="form-input form-input-with-icon"
+                placeholder="अपना पूरा नाम दर्ज करें" autocomplete="name">
+            </div>
+            <div class="form-error-msg" id="nameError">कृपया केवल अक्षरों में नाम लिखें</div>
+          </div>
+
+          <!-- Mobile Number Input Field -->
+          <div class="form-group">
+            <label for="userPhone" class="form-label">मोबाइल नंबर</label>
+            <div class="input-icon-wrap" id="phoneWrap">
+              <svg class="input-inner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <input type="tel" id="userPhone" name="userPhone" class="form-input form-input-with-icon"
+                placeholder="अपना 10 अंकों का मोबाइल नंबर दर्ज करें" maxlength="10" autocomplete="tel">
+            </div>
+            <div class="form-error-msg" id="phoneError">10 अंकों का सही मोबाइल नंबर डालें (6-9 से शुरू)</div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-submit-wrap">
+            <button type="submit" class="order-submit-btn" id="orderSubmitBtn">
+              <span class="btn-text">ऑर्डर करें</span>
+              <svg class="btn-cart-icon" viewBox="0 0 20 20" fill="currentColor" width="22" height="22">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Order Success Message Box -->
+          <div class="order-success-msg" id="orderSuccessMsg" style="display: none;">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="22" height="22">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>धन्यवाद! आपका ऑर्डर दर्ज कर लिया गया है। हम जल्द ही आपसे संपर्क करेंगे।</span>
+          </div>
+
+          <!-- Trust Badges / Footer Note (Exact user text) -->
+          <div class="order-trust-footer">
+            <svg class="lock-icon" viewBox="0 0 20 20" fill="currentColor" width="15" height="15">
+              <path fill-rule="evenodd"
+                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>Secure Order · Delivery Information · Product Details</span>
+          </div>
+        </form>
       </div>
     </section>
   </div>
