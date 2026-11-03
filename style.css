@@ -31,6 +31,10 @@
   --shadow-glow: 0 0 15px rgba(245, 158, 11, 0.25);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -230,7 +234,7 @@ body {
    ======================================================== */
 .product-section.podium-style {
   position: relative;
-  padding: 32px 12px 38px;
+  padding: 30px 12px 20px;
   background-color: #F8FAFC;
   border-top: 1px solid #E2E8F0;
 }
@@ -258,18 +262,18 @@ body {
 }
 
 .podium-heading-clean {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 800;
   color: var(--royal-blue);
   line-height: 1.3;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 /* 3D Stage Arena */
 .podium-stage-arena {
   position: relative;
   width: 100%;
-  height: 310px;
+  height: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,27 +284,27 @@ body {
 /* 3D Large Circular Alcove Backdrop with Inset Depth */
 .podium-alcove-circle {
   position: absolute;
-  width: 270px;
-  height: 270px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, #FFFFFF 30%, #F8FAFC 75%, #EBF0F5 100%);
-  border: 3.5px solid #FFFFFF;
-  box-shadow: inset 0 8px 24px rgba(31, 58, 138, 0.08), 0 10px 24px rgba(31, 58, 138, 0.04);
-  top: 6px;
+  border: 4px solid #FFFFFF;
+  box-shadow: inset 0 10px 28px rgba(31, 58, 138, 0.09), 0 12px 28px rgba(31, 58, 138, 0.05);
+  top: 10px;
   z-index: 1;
 }
 
-/* Product Bottle & Pedestal Frame */
+/* Product Bottle & Pedestal Frame - Full Uncut Showcase */
 .podium-bottle-frame {
   position: relative;
   z-index: 3;
-  width: 155px;
-  height: 200px;
-  border-radius: 78px 78px 16px 16px;
+  width: 205px;
+  height: 265px;
+  border-radius: 36px;
   overflow: hidden;
-  border: 3.5px solid #FFFFFF;
-  box-shadow: 0 14px 28px rgba(31, 58, 138, 0.16);
-  top: -12px;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 16px 36px rgba(31, 58, 138, 0.18);
+  top: -6px;
   transition: transform 0.3s ease;
 }
 
@@ -312,75 +316,82 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center bottom;
   display: block;
 }
 
-/* SVG Precision Pointer Lines with Dots (Strictly Royal Blue #1F3A8A) */
-.podium-pointers-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.pointer-dot-svg {
-  fill: var(--royal-blue);
-}
-
-.pointer-path-svg {
-  stroke: var(--royal-blue);
-  stroke-width: 1.5;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* Callout Labels (Strictly Royal Blue #1F3A8A) */
+/* Integrated Callout Tags (Zero Overlap & Never Cut Through Text) */
 .podium-callout {
   position: absolute;
   z-index: 6;
+  display: flex;
+  align-items: center;
   pointer-events: none;
 }
 
-.podium-callout h4 {
-  font-size: 12.5px;
-  font-weight: 800;
+.callout-pill {
+  background: #FFFFFF;
   color: var(--royal-blue);
-  line-height: 1.25;
-  margin: 0;
-  letter-spacing: 0.2px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+  padding: 5px 10px;
+  border-radius: 14px;
+  border: 1.5px solid var(--royal-blue);
+  box-shadow: 0 4px 14px rgba(31, 58, 138, 0.16);
+  white-space: nowrap;
 }
 
-.callout-left-top {
-  top: 72px;
-  left: 6px;
-  width: 86px;
+.pill-left {
   text-align: right;
 }
 
-.callout-right-mid {
-  top: 148px;
-  right: 6px;
-  width: 86px;
+.pill-right {
   text-align: left;
 }
 
-.callout-left-bottom {
-  top: 194px;
+.callout-pointer-line {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.callout-arm-horiz {
+  height: 2px;
+  width: 14px;
+  background: var(--royal-blue);
+}
+
+.callout-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--royal-blue);
+  box-shadow: 0 0 0 2.5px rgba(31, 58, 138, 0.3);
+  flex-shrink: 0;
+}
+
+.callout-left-top {
+  top: 52px;
   left: 6px;
-  width: 86px;
-  text-align: right;
+}
+
+.callout-right-mid {
+  top: 135px;
+  right: 6px;
+}
+
+.callout-left-bottom {
+  top: 238px;
+  left: 6px;
 }
 
 /* 3D White Pedestal Base with Saffron Rim */
 .podium-base-pedestal {
   position: absolute;
   bottom: 8px;
-  width: 220px;
+  width: 240px;
   height: 24px;
   z-index: 4;
   display: flex;
@@ -390,8 +401,8 @@ body {
 }
 
 .pedestal-gold-line {
-  width: 170px;
-  height: 2.5px;
+  width: 190px;
+  height: 3px;
   background: linear-gradient(90deg, transparent, var(--saffron), var(--saffron-dark), transparent);
   border-radius: 2px;
 }
@@ -428,21 +439,21 @@ body {
   transform: rotate(-12deg);
 }
 
-/* Clean Description Box Below Card (Royal Blue & Saffron) */
+/* Clean Description Box Below Card (Royal Blue & Saffron) - Enlarged */
 .podium-desc-card {
-  margin-top: 16px;
+  margin-top: 18px;
   background-color: var(--royal-blue);
   color: #FFFFFF;
-  padding: 14px 18px;
-  border-radius: 16px;
-  border-left: 4.5px solid var(--saffron);
-  box-shadow: 0 6px 16px rgba(31, 58, 138, 0.15);
+  padding: 16px 20px;
+  border-radius: 18px;
+  border-left: 5px solid var(--saffron);
+  box-shadow: 0 8px 20px rgba(31, 58, 138, 0.18);
 }
 
 .podium-desc-card p {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
   color: #FFFFFF;
   margin: 0;
 }
@@ -455,7 +466,7 @@ body {
    ======================================================== */
 .how-it-works-section {
   position: relative;
-  padding: 38px 12px 48px;
+  padding: 20px 12px 10px;
   background-color: #FFFFFF;
   border-top: 1px solid #E2E8F0;
   overflow: hidden;
@@ -464,7 +475,7 @@ body {
 .section-tag-center {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .tag-pill {
@@ -479,12 +490,12 @@ body {
 }
 
 .section-title-works {
-  font-size: 23px;
+  font-size: 26px;
   font-weight: 800;
   color: var(--royal-blue);
   text-align: center;
   line-height: 1.3;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 /* Infographic Flow Container (Larger Images & Bolder Text) */
@@ -492,8 +503,8 @@ body {
   position: relative;
   width: 100%;
   max-width: 440px;
-  aspect-ratio: 400 / 710;
-  margin: 26px auto 14px;
+  aspect-ratio: 400 / 698;
+  margin: 8px auto 0;
 }
 
 /* SVG Vector Canvas */
@@ -528,8 +539,8 @@ body {
 
 /* Node spacer (width of circle) */
 .flow-node-col {
-  width: 140px;
-  min-width: 140px;
+  width: 154px;
+  min-width: 154px;
   height: 100%;
   flex-shrink: 0;
 }
@@ -538,7 +549,7 @@ body {
 .flow-text-card {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex: 1;
   min-width: 0;
 }
@@ -559,7 +570,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 16px;
+  width: 18px;
 }
 
 .flow-arrow-icon.arrow-blue {
@@ -586,10 +597,10 @@ body {
 
 .flow-step-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 20.5px;
   font-weight: 800;
   line-height: 1.25;
-  margin: 0 0 5px 0;
+  margin: 0 0 6px 0;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -604,16 +615,13 @@ body {
 
 .flow-step-desc {
   font-family: 'Mukta', sans-serif;
-  font-size: 15.5px;
+  font-size: 17.5px;
   color: #0F172A;
   line-height: 1.45;
   font-weight: 600;
   margin: 0;
 }
 
-/* ========================================================
-   SECTION 5: INGREDIENTS (Interlocking Pinwheel Infographic)
-   ======================================================== */
 /* ========================================================
    SECTION 5: INGREDIENTS (Organic Leaf Cards - Royal Blue Theme)
    Strict Brand Palette:
@@ -623,7 +631,7 @@ body {
    ======================================================== */
 .ingredients-section.leaf-cards-style {
   position: relative;
-  padding: 38px 16px 48px;
+  padding: 24px 14px 22px;
   background: linear-gradient(180deg, #1E3A8A 0%, #172554 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
@@ -638,7 +646,7 @@ body {
 
 .ingredients-section.leaf-cards-style .section-title-ingredients {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 800;
   color: #FFFFFF; /* Pure White on Royal Blue */
   text-align: center;
@@ -657,7 +665,7 @@ body {
   background: var(--saffron); /* #F59E0B */
   border-radius: 99px;
   box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
-  margin: 6px auto 24px auto;
+  margin: 6px auto 18px auto;
 }
 
 /* Leaf Cards Container */
@@ -669,36 +677,36 @@ body {
   margin: 0 auto;
 }
 
-/* Individual Organic Leaf Card (Crisp Pure White #FFFFFF) */
+/* Individual Organic Leaf Card (Crisp Pure White #FFFFFF) - Enlarged */
 .herb-leaf-card {
   display: flex;
   align-items: center;
   background: var(--pure-white); /* #FFFFFF */
-  border-radius: 48px 16px 48px 16px;
-  padding: 12px 18px 12px 12px;
-  gap: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 54px 20px 54px 20px;
+  padding: 16px 20px 16px 16px;
+  gap: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .herb-leaf-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
   border-color: var(--saffron); /* #F59E0B */
 }
 
-/* Leaf-shaped Image Wrapper (Royal Blue Border #1F3A8A) */
+/* Leaf-shaped Image Wrapper (Royal Blue Border #1F3A8A) - Enlarged */
 .herb-leaf-img-wrap {
-  width: 104px;
-  height: 94px;
-  min-width: 104px;
-  border-radius: 40px 10px 40px 10px;
-  border: 2.5px solid var(--royal-blue); /* #1F3A8A */
+  width: 130px;
+  height: 118px;
+  min-width: 130px;
+  border-radius: 48px 16px 48px 16px;
+  border: 3.5px solid var(--royal-blue); /* #1F3A8A */
   overflow: hidden;
   flex-shrink: 0;
   background: var(--pure-white);
-  box-shadow: 0 4px 10px rgba(31, 58, 138, 0.15);
+  box-shadow: 0 4px 12px rgba(31, 58, 138, 0.18);
 }
 
 .herb-leaf-img {
@@ -708,7 +716,7 @@ body {
   display: block;
 }
 
-/* Card Content (Herb Title & Subtitle) */
+/* Card Content (Herb Title & Subtitle) - Enlarged */
 .herb-leaf-content {
   flex: 1;
   min-width: 0;
@@ -719,7 +727,7 @@ body {
 
 .herb-leaf-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 19px;
+  font-size: 23px;
   font-weight: 800;
   color: var(--royal-blue); /* #1F3A8A */
   line-height: 1.25;
@@ -729,15 +737,15 @@ body {
 
 .herb-leaf-title .highlight-saffron {
   color: var(--saffron-dark); /* #D97706 / #F59E0B */
-  font-size: 15px;
+  font-size: 17.5px;
   font-weight: 700;
 }
 
 .herb-leaf-desc {
   font-family: 'Mukta', sans-serif;
-  font-size: 15px;
-  color: #475569;
-  line-height: 1.38;
+  font-size: 17px;
+  color: #334155;
+  line-height: 1.42;
   font-weight: 600;
   margin: 0;
 }
@@ -770,7 +778,7 @@ body {
    ======================================================== */
 .trust-section {
   position: relative;
-  padding: 40px 14px 48px;
+  padding: 22px 14px 22px;
   background-color: #F8FAFC;
   border-top: 1px solid #E2E8F0;
   overflow: hidden;
@@ -778,7 +786,7 @@ body {
 
 .section-title-trust {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 800;
   color: var(--royal-blue);
   text-align: center;
@@ -856,126 +864,69 @@ body {
   z-index: 1;
 }
 
-/* Main Elevated White Card */
+/* Main Elevated White Card - Enlarged */
 .trust-inner-card {
   position: relative;
   z-index: 2;
   width: 100%;
   background: var(--pure-white);
-  border-radius: 18px;
-  padding: 22px 10px 18px;
-  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+  border-radius: 22px;
+  padding: 26px 12px 22px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  min-height: 168px;
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  min-height: 230px;
   justify-content: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .trust-inner-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(31, 58, 138, 0.16);
+  box-shadow: 0 14px 32px rgba(31, 58, 138, 0.18);
+  border-color: var(--saffron);
 }
 
-/* Corner Curved Step Tab Badge (Reference Style) */
-.step-tab {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.step-tab.tab-br {
-  bottom: 0;
-  right: 0;
-  border-radius: 100% 0 0 0;
-  padding: 10px 0 0 10px;
-}
-
-.step-tab.tab-bl {
-  bottom: 0;
-  left: 0;
-  border-radius: 0 100% 0 0;
-  padding: 10px 10px 0 0;
-}
-
-.step-tab.tab-tr {
-  top: 0;
-  right: 0;
-  border-radius: 0 0 0 100%;
-  padding: 0 0 10px 10px;
-}
-
-.step-tab.tab-tl {
-  top: 0;
-  left: 0;
-  border-radius: 0 0 100% 0;
-  padding: 0 10px 10px 0;
-}
-
-.step-tab.tab-saffron {
-  background: var(--saffron);
-}
-
-.step-tab.tab-blue {
-  background: var(--royal-blue);
-}
-
-.tab-step {
-  font-family: 'Poppins', sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.3px;
-}
-
-.tab-num {
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  font-weight: 900;
-  line-height: 1;
-  margin-top: 1px;
-}
-
-/* Certificate Image */
+/* Certificate Image (Extra Large & Highly Prominent) */
 .trust-cert-wrap {
-  height: 54px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  width: 100%;
 }
 
 .trust-cert-img {
-  max-height: 52px;
-  max-width: 82px;
+  max-height: 115px;
+  max-width: 148px;
+  width: auto;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
 }
 
-/* Titles */
+.trust-inner-card:hover .trust-cert-img {
+  transform: scale(1.06);
+}
+
+/* Titles - Enlarged */
 .trust-card-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 800;
   color: var(--royal-blue);
-  margin: 0 0 2px 0;
+  margin: 0 0 4px 0;
   line-height: 1.2;
 }
 
 .trust-card-sub {
   font-family: 'Mukta', sans-serif;
-  font-size: 13.5px;
+  font-size: 16px;
   font-weight: 600;
   color: #64748B;
   margin: 0;
@@ -986,10 +937,816 @@ body {
     gap: 12px;
   }
   .trust-inner-card {
-    padding: 18px 6px 14px;
-    min-height: 155px;
+    padding: 20px 8px 16px;
+    min-height: 180px;
+  }
+  .trust-cert-wrap {
+    height: 85px;
+  }
+  .trust-cert-img {
+    max-height: 80px;
+    max-width: 105px;
   }
   .trust-card-title {
-    font-size: 14.5px;
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+/* ========================================================
+   SECTION 7: COMPARISON (Relief Pro vs Other Market Products)
+   Strict Brand Palette:
+   - Royal Blue:  #1F3A8A
+   - Saffron:     #F59E0B
+   - Pure White:  #FFFFFF
+   ======================================================== */
+.comparison-section {
+  position: relative;
+  padding: 22px 12px 24px;
+  background-color: #FFFFFF;
+  border-top: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+.section-title-comparison {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+
+/* Comparison Table Wrapper */
+.comparison-table-wrapper {
+  background: var(--pure-white);
+  border-radius: 22px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.09);
+  border: 1.5px solid #E2E8F0;
+  overflow: hidden;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+/* Comparison Header */
+.comp-header-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 2px solid #E2E8F0;
+}
+
+.comp-col {
+  padding: 24px 8px 16px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comp-col-relief {
+  background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 100%);
+  border-right: 1.5px solid #DBEAFE;
+}
+
+.comp-col-other {
+  background: #F8FAFC;
+}
+
+.comp-winner-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--saffron);
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 3px 14px;
+  border-radius: 0 0 10px 10px;
+  letter-spacing: 0.4px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+  white-space: nowrap;
+}
+
+.comp-other-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #94A3B8;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 14px;
+  border-radius: 0 0 10px 10px;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+/* Product Image Wrap - Enlarged */
+.comp-header-img-wrap {
+  width: 115px;
+  height: 115px;
+  margin: 10px auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comp-header-img {
+  max-height: 112px;
+  max-width: 112px;
+  object-fit: contain;
+  border-radius: 14px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.16));
+  transition: transform 0.25s ease;
+}
+
+.comp-header-img-other {
+  object-fit: cover;
+  border: 1.5px solid #E2E8F0;
+}
+
+.comp-prod-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  margin: 0 0 3px 0;
+  line-height: 1.2;
+}
+
+.comp-title-muted {
+  color: #64748B;
+}
+
+.comp-prod-tag {
+  font-family: 'Mukta', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2563EB;
+  margin: 0;
+}
+
+.comp-tag-muted {
+  color: #94A3B8;
+}
+
+/* Comparison Body Rows */
+.comp-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-item-row {
+  border-bottom: 1.5px solid #E2E8F0;
+  padding: 22px 10px;
+  overflow: visible;
+}
+
+.comp-item-row:last-child {
+  border-bottom: none;
+}
+
+.comp-feature-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: #F1F5F9;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.diff-num {
+  background: var(--royal-blue);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.comp-item-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.comp-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 10px 22px;
+  border-radius: 16px;
+  position: relative;
+  overflow: visible;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comp-cell-relief {
+  background: #F0FDF4;
+  border: 1.5px solid #BBF7D0;
+  border-top: 4px solid #16A34A;
+}
+
+.comp-cell-other {
+  background: #FEF2F2;
+  border: 1.5px solid #FECACA;
+  border-top: 4px solid #EF4444;
+}
+
+/* Image Thumbnail in each difference - Extra Large & Prominent */
+.comp-thumb-box {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.comp-thumb-img {
+  width: 104px;
+  height: 104px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  border: 2px solid #FFFFFF;
+}
+
+.comp-thumb-contain {
+  object-fit: contain;
+  background: #FFFFFF;
+  padding: 6px;
+}
+
+/* Floating Status Badge (Checkmark / Cross) - Enlarged */
+.comp-status-float {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  border: 2.5px solid #FFFFFF;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.comp-status-float svg {
+  width: 18px;
+  height: 18px;
+}
+
+.comp-status-float.check {
+  background: #16A34A;
+}
+
+.comp-status-float.cross {
+  background: #EF4444;
+}
+
+/* Typography in each difference - Enlarged & Never Cut Off */
+.comp-cell-info {
+  width: 100%;
+}
+
+.comp-cell-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17.5px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+}
+
+.comp-cell-relief .comp-cell-title {
+  color: #166534;
+}
+
+.comp-cell-other .comp-cell-title {
+  color: #991B1B;
+}
+
+.comp-cell-desc {
+  font-family: 'Mukta', sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 0;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.comp-cell-relief .comp-cell-desc {
+  color: #15803D;
+}
+
+.comp-cell-other .comp-cell-desc {
+  color: #B91C1C;
+}
+
+@media (max-width: 360px) {
+  .comp-header-img-wrap {
+    width: 82px;
+    height: 82px;
+  }
+  .comp-header-img {
+    max-height: 80px;
+    max-width: 80px;
+  }
+  .comp-thumb-box,
+  .comp-thumb-img {
+    width: 76px;
+    height: 76px;
+  }
+  .comp-cell-title {
+    font-size: 14px;
+  }
+  .comp-cell-desc {
+    font-size: 13px;
+  }
+  .comp-prod-title {
+    font-size: 18px;
+  }
+}
+
+/* ========================================================
+   SECTION 8: FINAL CTA (Image Ke Sath Designed)
+   Strict Brand Palette:
+   - Royal Blue:  #1F3A8A / #172554
+   - Saffron:     #F59E0B / #D97706
+   - Pure White:  #FFFFFF
+   ======================================================== */
+.final-cta-section {
+  position: relative;
+  padding: 22px 14px 40px;
+  background: linear-gradient(180deg, #1E3A8A 0%, #0F172A 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+/* Elevated White Action Card */
+.final-cta-card {
+  position: relative;
+  background: var(--pure-white);
+  border-radius: 26px;
+  padding: 30px 18px 28px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+  border: 2px solid rgba(245, 158, 11, 0.5);
+  max-width: 425px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Section Title */
+.final-cta-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.2px;
+}
+
+.final-cta-title .highlight-saffron {
+  color: var(--saffron-dark);
+}
+
+/* Descriptive Texts */
+.final-cta-desc-primary {
+  font-family: 'Mukta', sans-serif;
+  font-size: 17px;
+  color: #334155;
+  line-height: 1.48;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.final-cta-desc-secondary {
+  font-family: 'Mukta', sans-serif;
+  font-size: 16.5px;
+  color: var(--royal-blue);
+  line-height: 1.48;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  background: #EFF6FF;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border-left: 4px solid var(--royal-blue);
+}
+
+/* Product Showcase Box with Image */
+.final-cta-prod-box {
+  width: 100%;
+  background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+  border-radius: 20px;
+  border: 1.5px solid #DBEAFE;
+  padding: 18px 14px 16px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 2px 6px rgba(31, 58, 138, 0.05);
+}
+
+.final-cta-img-wrap {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(31, 58, 138, 0.22);
+  border: 3.5px solid var(--saffron);
+  margin-bottom: 12px;
+  background: var(--pure-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.final-cta-img-wrap:hover {
+  transform: scale(1.03);
+}
+
+.final-cta-prod-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.final-cta-prod-badge {
+  text-align: center;
+}
+
+.final-cta-prod-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+}
+
+.final-cta-prod-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--saffron-dark);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* High-Impact Action Button */
+.final-cta-btn-wrap {
+  width: 100%;
+}
+
+.final-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid #FEF08A;
+  box-sizing: border-box;
+}
+
+.final-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+}
+
+.final-cta-btn .btn-text {
+  line-height: 1.2;
+}
+
+.final-cta-btn .btn-arrow-icon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.final-cta-btn:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+@media (max-width: 360px) {
+  .final-cta-card {
+    padding: 24px 12px 22px;
+  }
+  .final-cta-title {
+    font-size: 21px;
+  }
+  .final-cta-desc-primary {
+    font-size: 15.5px;
+  }
+  .final-cta-desc-secondary {
+    font-size: 15px;
+  }
+  .final-cta-img-wrap {
+    width: 150px;
+    height: 150px;
+  }
+  .final-cta-prod-name {
+    font-size: 21px;
+  }
+  .final-cta-btn {
+    font-size: 15px;
+    padding: 14px 12px;
+  }
+}
+
+/* ========================================================
+   SECTION 9: ORDER NOW (Lead Order Form)
+   Strict Brand Palette:
+   - Royal Blue:  #1F3A8A
+   - Saffron:     #F59E0B / #D97706
+   - Pure White:  #FFFFFF
+   ======================================================== */
+.order-section {
+  position: relative;
+  padding: 24px 14px 44px;
+  background-color: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+/* Elevated White Order Card */
+.order-card-wrapper {
+  background: var(--pure-white);
+  border-radius: 24px;
+  padding: 28px 20px 24px;
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.1);
+  border: 1.5px solid #E2E8F0;
+  border-top: 5px solid var(--royal-blue);
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.order-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  text-align: center;
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.2px;
+}
+
+.order-section-title .highlight-saffron {
+  color: var(--saffron-dark);
+}
+
+/* Form Styling */
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #1E293B;
+  display: block;
+}
+
+/* Input with icon inside */
+.input-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-inner-icon {
+  position: absolute;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  color: #64748B;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.form-input-with-icon {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px 14px 44px;
+  border: 2px solid #CBD5E1;
+  border-radius: 14px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #0F172A;
+  background-color: #F8FAFC;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-input-with-icon::placeholder {
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.form-input-with-icon:focus {
+  border-color: var(--royal-blue);
+  background-color: #FFFFFF;
+  outline: none;
+  box-shadow: 0 0 0 3.5px rgba(31, 58, 138, 0.15);
+}
+
+/* Error State (Matches reference image) */
+.input-icon-wrap.has-error .form-input-with-icon {
+  border-color: #DC2626 !important;
+  background-color: #FEF2F2 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.14) !important;
+  color: #991B1B;
+}
+
+.input-icon-wrap.has-error .input-inner-icon {
+  color: #DC2626 !important;
+}
+
+.form-error-msg {
+  color: #DC2626;
+  font-family: 'Mukta', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+  display: none;
+  line-height: 1.35;
+}
+
+.form-error-msg.is-visible {
+  display: block;
+  animation: errorFadeIn 0.2s ease;
+}
+
+@keyframes errorFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Order Success Box */
+.order-success-msg {
+  margin-top: 14px;
+  background: #F0FDF4;
+  border: 1.5px solid #86EFAC;
+  color: #166534;
+  padding: 14px 16px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.order-success-msg svg {
+  color: #16A34A;
+  flex-shrink: 0;
+}
+
+/* Order Submit Button */
+.form-submit-wrap {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.order-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.order-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+}
+
+.order-submit-btn:active {
+  transform: translateY(0);
+}
+
+.order-submit-btn .btn-cart-icon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.order-submit-btn:hover .btn-cart-icon {
+  transform: translateX(4px);
+}
+
+/* Trust Badges & Footer Text */
+.order-trust-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #64748B;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.order-trust-footer .lock-icon {
+  color: #16A34A;
+  flex-shrink: 0;
+}
+
+@media (max-width: 360px) {
+  .order-card-wrapper {
+    padding: 22px 14px 20px;
+  }
+  .order-section-title {
+    font-size: 21px;
+  }
+  .form-label {
+    font-size: 15px;
+  }
+  .form-input {
+    font-size: 15px;
+    padding: 13px 14px;
+  }
+  .order-submit-btn {
+    font-size: 17px;
+    padding: 14px 16px;
+  }
+  .order-trust-footer {
+    font-size: 12px;
   }
 }
