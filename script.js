@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initOrderFormValidation();
+  initFAQAccordion();
 });
 
 function initScrollAnimations() {
@@ -151,5 +152,36 @@ function initOrderFormValidation() {
         if (successMsg) successMsg.style.display = 'none';
       }, 4000);
     }, 1500);
+  });
+}
+
+/* ========================================================
+   Section 11: FAQ Accordion Toggle
+   ======================================================== */
+function initFAQAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const icon = item.querySelector('.faq-toggle-icon');
+    if (!question) return;
+
+    question.addEventListener('click', () => {
+      const isCurrentlyActive = item.classList.contains('active');
+
+      // Close all other FAQ items
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        const otherIcon = otherItem.querySelector('.faq-toggle-icon');
+        if (otherIcon) otherIcon.textContent = '+';
+      });
+
+      // Toggle clicked item
+      if (!isCurrentlyActive) {
+        item.classList.add('active');
+        if (icon) icon.textContent = '−';
+      }
+    });
   });
 }
