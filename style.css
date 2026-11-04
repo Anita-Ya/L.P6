@@ -1660,19 +1660,18 @@ body {
    ======================================================== */
 .order-section {
   position: relative;
-  padding: 24px 14px 44px;
-  background-color: #F8FAFC;
-  border-top: 1px solid #E2E8F0;
+  padding: 18px 14px 24px;
+  background: linear-gradient(180deg, #0F172A 0%, #172554 100%);
   overflow: hidden;
 }
 
 /* Elevated White Order Card */
 .order-card-wrapper {
   background: var(--pure-white);
-  border-radius: 24px;
+  border-radius: 26px;
   padding: 28px 20px 24px;
-  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.1);
-  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
   border-top: 5px solid var(--royal-blue);
   max-width: 425px;
   margin: 0 auto;
@@ -1918,9 +1917,9 @@ body {
    ======================================================== */
 .reviews-section {
   position: relative;
-  padding: 34px 14px 44px;
-  background: linear-gradient(180deg, #1E3A8A 0%, #172554 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 24px 14px 44px;
+  background: linear-gradient(180deg, #172554 0%, #1E3A8A 100%);
+  border-top: none;
   overflow: hidden;
 }
 
