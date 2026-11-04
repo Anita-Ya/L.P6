@@ -130,28 +130,96 @@ function initOrderFormValidation() {
       return;
     }
 
-    // Success State
+    // Capture entered values before reset
+    const enteredName = nameInput.value.trim();
+    const enteredPhone = phoneInput.value.trim();
+
+    // Button loading state
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.7';
     }
 
-    if (successMsg) {
-      successMsg.style.display = 'flex';
-      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    // Reset after success
+    // Open Thank You Modal (Matches User Screenshot)
     setTimeout(() => {
+      openThankYouModal(enteredName, enteredPhone);
       form.reset();
+
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.style.opacity = '1';
       }
-      setTimeout(() => {
-        if (successMsg) successMsg.style.display = 'none';
-      }, 4000);
-    }, 1500);
+    }, 300);
+  });
+
+  // Modal Close Listeners
+  initModalListeners();
+}
+
+/* ========================================================
+   Thank You Modal Controls (Matches User Reference)
+   ======================================================== */
+function openThankYouModal(name, phone) {
+  const modal = document.getElementById('thankyouModal');
+  const nameEl = document.getElementById('modalUserName');
+  const phoneEl = document.getElementById('modalUserPhone');
+  const orderIdEl = document.getElementById('modalOrderId');
+
+  if (!modal) return;
+
+  // Set personalized name (matches "बधाई हो, kuki!")
+  if (nameEl) {
+    nameEl.textContent = name || 'ग्राहक';
+  }
+
+  // Set formatted mobile number (matches "+91 8465567676")
+  if (phoneEl) {
+    phoneEl.textContent = phone ? `+91 ${phone}` : '+91 ----------';
+  }
+
+  // Generate random 6-digit Order ID (matches "RP-593678")
+  if (orderIdEl) {
+    const randomId = Math.floor(100000 + Math.random() * 900000);
+    orderIdEl.textContent = `RP-${randomId}`;
+  }
+
+  // Open modal
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeThankYouModal() {
+  const modal = document.getElementById('thankyouModal');
+  if (!modal) return;
+
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function initModalListeners() {
+  const modal = document.getElementById('thankyouModal');
+  const closeBtn = document.getElementById('modalCloseBtn');
+  const doneBtn = document.getElementById('modalDoneBtn');
+
+  if (closeBtn) closeBtn.addEventListener('click', closeThankYouModal);
+  if (doneBtn) doneBtn.addEventListener('click', closeThankYouModal);
+
+  // Close on backdrop click
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeThankYouModal();
+      }
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeThankYouModal();
+    }
   });
 }
 
