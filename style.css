@@ -2401,3 +2401,236 @@ body {
     font-size: 14px;
   }
 }
+
+/* ========================================================
+   ORDER CONFIRMATION MODAL (Thank You Screen - Matches User Reference)
+   ======================================================== */
+.thankyou-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.thankyou-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.thankyou-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 385px;
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 32px 20px 26px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  transform: scale(0.92) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.thankyou-modal-overlay.is-open .thankyou-modal-card {
+  transform: scale(1) translateY(0);
+}
+
+/* Close Button (Top Right) */
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.modal-close-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+  transform: rotate(90deg);
+}
+
+/* Success Checkmark Icon Circle */
+.modal-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #EFF6FF;
+  border: 2.5px solid #BFDBFE;
+  color: var(--royal-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  box-shadow: 0 8px 24px rgba(31, 58, 138, 0.14);
+}
+
+/* Order Confirmed Badge Pill */
+.modal-badge-pill {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  border: 1.5px solid #BFDBFE;
+  background: #EFF6FF;
+  color: var(--royal-blue);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 12px;
+}
+
+/* Modal Title */
+.modal-title {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+
+.modal-name-highlight {
+  color: var(--saffron-dark);
+  font-weight: 800;
+}
+
+/* Modal Subtitle */
+.modal-subtitle {
+  font-family: 'Mukta', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #475569;
+  line-height: 1.48;
+  margin: 0 auto 16px;
+  max-width: 320px;
+}
+
+.modal-prod-highlight {
+  color: var(--royal-blue);
+  font-weight: 800;
+}
+
+/* Order Details Card */
+.modal-details-card {
+  background: #EFF6FF;
+  border: 1.5px solid #DBEAFE;
+  border-radius: 18px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.modal-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-detail-row:not(:last-child) {
+  border-bottom: 1px dashed #BFDBFE;
+}
+
+.detail-label {
+  color: #64748B;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.detail-val {
+  color: #1E293B;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.order-id-val {
+  color: var(--royal-blue);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.delivery-free {
+  color: #16A34A;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+/* Support Note */
+.modal-contact-note {
+  font-family: 'Mukta', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0 0 16px;
+}
+
+/* Dismiss / Done Button */
+.modal-done-btn {
+  width: 100%;
+  max-width: 230px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #2563EB 0%, #1F3A8A 100%);
+  color: #FFFFFF;
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(31, 58, 138, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.modal-done-btn:hover,
+.modal-done-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 26px rgba(31, 58, 138, 0.5);
+}
+
+@media (max-width: 360px) {
+  .thankyou-modal-card {
+    padding: 26px 16px 20px;
+  }
+  .modal-title {
+    font-size: 22px;
+  }
+  .modal-subtitle {
+    font-size: 13.5px;
+  }
+  .detail-label, .detail-val {
+    font-size: 12px;
+  }
+  .modal-done-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
