@@ -58,8 +58,166 @@ body {
   background-color: var(--royal-blue-dark);
   min-height: 100vh;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
+}
+
+/* ========================================================
+   Top Navigation / Sticky Brand Header (Matches User Reference)
+   ======================================================== */
+.top-nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-bottom: 1.5px solid #E2E8F0;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.08);
+  z-index: 1000;
+  padding: 8px 12px;
+}
+
+.top-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+/* Brand Info (Left) */
+.top-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.brand-logo-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563EB 0%, #1E3A8A 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(31, 58, 138, 0.25);
+  flex-shrink: 0;
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #1E3A8A;
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+}
+
+.brand-tagline {
+  font-family: 'Mukta', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2563EB;
+  line-height: 1.15;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Order Button (Right) */
+.top-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, #2563EB 0%, #1E3A8A 100%);
+  padding: 5px 12px 5px 6px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.top-nav-btn:hover,
+.top-nav-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45);
+}
+
+.nav-cart-circle {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #1E3A8A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.nav-btn-text {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.nav-btn-arrow {
+  color: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.top-nav-btn:hover .nav-btn-arrow {
+  transform: translateX(2px);
+}
+
+@media (max-width: 360px) {
+  .top-nav-bar {
+    padding: 7px 10px;
+  }
+  .brand-logo-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+  .brand-name {
+    font-size: 15px;
+  }
+  .brand-tagline {
+    font-size: 10px;
+  }
+  .top-nav-btn {
+    padding: 4px 10px 4px 5px;
+    gap: 5px;
+  }
+  .nav-cart-circle {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+  .nav-btn-text {
+    font-size: 12px;
+  }
 }
 
 /* ========================================================
